@@ -1,7 +1,7 @@
 class CreateRoles < ActiveRecord::Migration
   def change
     create_table :roles do |t|
-      t.references :type, index: true
+      t.references :type, index: true, null: false
 
       t.timestamps null: false
     end

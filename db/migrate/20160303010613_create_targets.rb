@@ -1,8 +1,8 @@
 class CreateTargets < ActiveRecord::Migration
   def change
     create_table :targets do |t|
-      t.references :user, index: true
-      t.references :user_role, index: true
+      t.references :user, index: true, null: false
+      t.references :user_role, index: true, null: false
 
       t.timestamps null: false
     end
